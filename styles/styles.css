@@ -1,0 +1,165 @@
+/*
+The CSS code gets to executed from top to bottom and left to right
+*/
+
+
+/* CSS reset
+(all the browsers will see the website in the same by setting every tag to 0 (the website will look the same on all browsers))
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
+/*style for hidden modal*/
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: #faac26;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 1000;
+    display: none;
+}
+
+.content {
+    color: #fff;
+    background: black;
+    position: relative;
+    height: auto;
+    width: 1200px;
+    border-radius: 3px;
+    top: 15%;
+    margin: auto auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.content h3 {
+    margin: 0;
+    padding: 0.4em;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 300;
+    opacity: 0.8;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px 3px 0 0;
+}
+
+.content > div {
+    padding: 15px 40px 30px;
+    margin: 0;
+    font-weight: 300;
+    font-size: 1.15em;
+}
+
+.content > div p {
+    margin: 0;
+    padding: 10px 0;
+    line-height: 2em;
+    text-align: justify;
+}
+
+.content > div ul {
+    margin-bottom: -30px;
+    padding: 0 0 30px 20px;
+    text-align: left;
+}
+
+.content > div ul li {
+    padding: 5px 0;
+    display: block;
+    list-style-type: disc;
+    line-height: 1.5em;
+}
+
+.content > div a {
+    font-size: 0.8em;
+    background: #faac26;
+    color: #f06524;
+    padding: 0.5em 2em;
+    margin-bottom: 50px;
+    border-radius: 3px;
+}
+
+
+/* General styles
+(the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
+*/
+body {
+    background-color: black;
+    color: white;
+    font-family: serif;
+    font-size: 24px;
+}
+ol, ul {
+    list-style: none;
+}
+#believe {
+    width: 592px;
+    height: 256px;
+    margin-top: 60px;
+}
+/* Header styles
+(all the styles inside the < header > or < nav > tags)
+*/
+nav ul li:first-child {
+    float: left;
+    margin-left: 10px;
+}
+
+nav ul li:last-child {
+    float: right;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Content styles
+(all the styles inside the < sections > or < aside > tags)
+*/
+#qImage {
+    width: 500px;
+    margin: 0 0 0 1000px;
+    position: absolute;
+}
+#qNumber {
+    font-size: 30px;
+    color: #faac26;
+}
+#questionText {
+    font-size: 30px;
+    color: #faac26;
+}
+#guessButton {
+    background: #f06524;
+    color: white;
+}
+/* Footer styles
+(all the styles inside the < footer > tag)
+*/
+
+
+/* Responsive styles
+(the very last module in the CSS, contains all the media queries and it is dealing with the compatibility with mobiles and tablets)
+*/
