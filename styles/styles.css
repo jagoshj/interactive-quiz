@@ -25,22 +25,18 @@ The CSS code gets to executed from top to bottom and left to right
     -webkit-padding-end: 0px;
 }
 
-/*style for hidden modal*/
 
-.overlay {
-    width: 100%;
-    height: 100%;
+/*style for Start Section*/
+
+.start-section {
     color: #fff;
-    background: #faac26;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    z-index: 1000;
+    background: #000;
+    position: relative;
     display: none;
+    text-align: justify;
 }
 
-.content {
+.text {
     color: #fff;
     background: black;
     position: relative;
@@ -48,12 +44,12 @@ The CSS code gets to executed from top to bottom and left to right
     width: 1200px;
     border-radius: 3px;
     top: 15%;
-    margin: auto auto;
+    margin: 1rem auto;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.content h3 {
-    margin: 0;
+.text h2 {
+    margin: 1rem auto;
     padding: 0.4em;
     text-align: center;
     font-size: 2em;
@@ -63,71 +59,72 @@ The CSS code gets to executed from top to bottom and left to right
     border-radius: 3px 3px 0 0;
 }
 
-.content > div {
+.text > p {
     padding: 15px 40px 30px;
     margin: 0;
     font-weight: 300;
     font-size: 1.15em;
 }
 
-.content > div p {
-    margin: 0;
-    padding: 10px 0;
-    line-height: 2em;
-    text-align: justify;
+#startQuizButton {
+    font-family: 'australia-title';
+    border-radius: 3px 3px 0 0;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem auto;
 }
 
-.content > div ul {
-    margin-bottom: -30px;
-    padding: 0 0 30px 20px;
-    text-align: left;
-}
-
-.content > div ul li {
-    padding: 5px 0;
-    display: block;
-    list-style-type: disc;
-    line-height: 1.5em;
-}
-
-.content > div a {
-    font-size: 0.8em;
-    background: #faac26;
-    color: #f06524;
-    padding: 0.5em 2em;
-    margin-bottom: 50px;
-    border-radius: 3px;
+button:hover {
+    background-color: #317873;
+    color: #fff;
+    cursor: pointer;
 }
 
 
 /* General styles
 (the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
 */
+
 body {
     background-color: black;
     color: white;
-    font-family: serif;
-    font-size: 24px;
+    font-family: 'australia-title';
+    font-size: 2rem;
 }
-ol, ul {
+
+header {
+    text-align: center;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+ol,
+ul {
     list-style: none;
 }
+
 #believe {
-    width: 592px;
-    height: 256px;
-    margin-top: 60px;
+    width: 50%;
+    margin-top: 10px;
 }
+
+header,
+section {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 /* Header styles
 (all the styles inside the < header > or < nav > tags)
 */
-nav ul li:first-child {
-    float: left;
-    margin-left: 10px;
-}
 
-nav ul li:last-child {
+nav ul li:first-child {
     float: right;
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
 nav a {
@@ -135,26 +132,85 @@ nav a {
     color: white;
 }
 
+
 /* Content styles
 (all the styles inside the < sections > or < aside > tags)
 */
-#qImage {
-    width: 500px;
-    margin: 0 0 0 1000px;
-    position: absolute;
+
+.quiz > * {
+    vertical-align: top;
 }
+
+.quizImage {
+    width: 30%;
+    display: inline-block;
+}
+
+.quizText {
+    width: 66%;
+    display: inline-block;
+}
+
+#qImage {
+    width: 100%;
+}
+
 #qNumber {
     font-size: 30px;
     color: #faac26;
+    margin-bottom: 1rem;
 }
+
 #questionText {
     font-size: 30px;
     color: #faac26;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
-#guessButton {
+
+.options {
+    margin-bottom: 0.5rem;
+}
+
+input {
+    margin-right: 1rem;
+    display: none;
+}
+
+#choices {
     background: #f06524;
     color: white;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
 }
+
+#choices li:hover {
+    background-color: #317873;
+}
+
+a.new {
+    font-family: 'australia-title';
+    border-radius: 3px 3px 0 0;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem auto;
+    background-color: #ddd;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #317873;
+    color: #fff;
+}
+
+#qResults {
+    color: #faac26;
+}
+
+
 /* Footer styles
 (all the styles inside the < footer > tag)
 */
